@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>Bug Monsters - Gamify Your Debugging Experience | VS Code Extension</title>
+    <meta name="description" content="Transform boring bugs into exciting monsters! Bug Monsters is a VS Code extension that gamifies debugging by visualizing errors as animated monsters. Make bug fixing fun!">
+    <meta name="keywords" content="VS Code, extension, debugging, gamification, developer tools, bug tracking, error visualization, TypeScript, programming">
+    <meta name="author" content="kpab">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Bug Monsters - Gamify Your Debugging Experience">
+    <meta property="og:description" content="Transform boring bugs into exciting monsters! Make bug fixing fun with animated monsters in VS Code.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kpab.github.io/bug-monster-page/">
+    <meta property="og:image" content="https://kpab.github.io/bug-monster-page/images/og-image.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bug Monsters - Gamify Your Debugging Experience">
+    <meta name="twitter:description" content="Transform boring bugs into exciting monsters! Make bug fixing fun with animated monsters in VS Code.">
+    <meta name="twitter:image" content="https://kpab.github.io/bug-monster-page/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" type="image/png" href="favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Bug Monsters",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "VS Code",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "A gamified debugging tool for VS Code that visualizes errors and warnings as animated monsters."
+    }
+    </script>
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
+        <button id="lang-ja" class="lang-btn" data-lang="ja">JP</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="hero.title">Bug Monsters</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Transform Boring Bugs into Epic Battles!</p>
+                <p class="hero-description" data-i18n="hero.description">
+                    A gamified debugging experience for VS Code. Watch your errors come to life as animated monsters and defeat them one by one!
+                </p>
+                <div class="hero-cta">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=kpab.bug-monsters" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <span data-i18n="hero.install">Install Extension</span>
+                    </a>
+                    <a href="https://github.com/kpab/bug-monster" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        <span data-i18n="hero.github">View on GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="monster-showcase">
+                    <div class="monster-item monster-error" data-delay="0">
+                        <svg viewBox="0 0 100 100" class="monster-svg">
+                            <circle cx="50" cy="50" r="40" fill="#ff4444"/>
+                            <circle cx="35" cy="40" r="8" fill="#fff"/>
+                            <circle cx="65" cy="40" r="8" fill="#fff"/>
+                            <circle cx="35" cy="40" r="4" fill="#000"/>
+                            <circle cx="65" cy="40" r="4" fill="#000"/>
+                            <path d="M 30 65 Q 50 75 70 65" stroke="#000" stroke-width="3" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="monster-item monster-type" data-delay="0.2">
+                        <svg viewBox="0 0 100 100" class="monster-svg">
+                            <circle cx="50" cy="50" r="40" fill="#9945ff"/>
+                            <circle cx="35" cy="40" r="8" fill="#fff"/>
+                            <circle cx="65" cy="40" r="8" fill="#fff"/>
+                            <circle cx="35" cy="40" r="4" fill="#000"/>
+                            <circle cx="65" cy="40" r="4" fill="#000"/>
+                            <path d="M 30 70 Q 50 60 70 70" stroke="#000" stroke-width="3" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="monster-item monster-reference" data-delay="0.4">
+                        <svg viewBox="0 0 100 100" class="monster-svg">
+                            <circle cx="50" cy="50" r="40" fill="#3b82f6"/>
+                            <circle cx="35" cy="40" r="8" fill="#fff"/>
+                            <circle cx="65" cy="40" r="8" fill="#fff"/>
+                            <circle cx="35" cy="40" r="4" fill="#000"/>
+                            <circle cx="65" cy="40" r="4" fill="#000"/>
+                            <ellipse cx="50" cy="65" rx="15" ry="10" fill="#000"/>
+                        </svg>
+                    </div>
+                    <div class="monster-item monster-warning" data-delay="0.6">
+                        <svg viewBox="0 0 100 100" class="monster-svg">
+                            <circle cx="50" cy="50" r="40" fill="#fbbf24"/>
+                            <circle cx="35" cy="40" r="8" fill="#fff"/>
+                            <circle cx="65" cy="40" r="8" fill="#fff"/>
+                            <circle cx="35" cy="40" r="4" fill="#000"/>
+                            <circle cx="65" cy="40" r="4" fill="#000"/>
+                            <circle cx="50" cy="65" r="3" fill="#000"/>
+                        </svg>
+                    </div>
+                    <div class="monster-item monster-hint" data-delay="0.8">
+                        <svg viewBox="0 0 100 100" class="monster-svg">
+                            <circle cx="50" cy="50" r="40" fill="#10b981"/>
+                            <circle cx="35" cy="45" r="6" fill="#fff"/>
+                            <circle cx="65" cy="45" r="6" fill="#fff"/>
+                            <circle cx="35" cy="45" r="3" fill="#000"/>
+                            <circle cx="65" cy="45" r="3" fill="#000"/>
+                            <path d="M 35 60 Q 50 70 65 60" stroke="#000" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title" data-i18n="features.title">Epic Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3 data-i18n="features.gamified.title">Gamified Debugging</h3>
+                    <p data-i18n="features.gamified.description">Turn mundane bug fixing into an exciting adventure. Each error becomes a monster to defeat!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 data-i18n="features.realtime.title">Real-time Monitoring</h3>
+                    <p data-i18n="features.realtime.description">Monsters appear instantly when errors occur. Watch them spawn in real-time as you code!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3 data-i18n="features.progression.title">Size Progression System</h3>
+                    <p data-i18n="features.progression.description">Monsters grow from S to M to L to XL as errors accumulate. Face the ultimate XL boss at 10+ errors!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3 data-i18n="features.animated.title">Animated Monsters</h3>
+                    <p data-i18n="features.animated.description">Beautiful SVG animations including breathing, floating, shaking, and explosive spawns!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 data-i18n="features.types.title">5 Monster Types</h3>
+                    <p data-i18n="features.types.description">Different monsters for Errors, TypeErrors, ReferenceErrors, Warnings, and Hints!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3 data-i18n="features.customizable.title">Highly Customizable</h3>
+                    <p data-i18n="features.customizable.description">Adjust animation speed, themes, and maximum monster display count to your preference!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monsters Section -->
+    <section class="monsters">
+        <div class="container">
+            <h2 class="section-title" data-i18n="monsters.title">Meet the Monsters</h2>
+            <div class="monsters-grid">
+                <div class="monster-card">
+                    <div class="monster-visual error-monster">
+                        <svg viewBox="0 0 120 120" class="monster-svg-large">
+                            <circle cx="60" cy="60" r="50" fill="#ff4444"/>
+                            <circle cx="45" cy="50" r="10" fill="#fff"/>
+                            <circle cx="75" cy="50" r="10" fill="#fff"/>
+                            <circle cx="45" cy="50" r="5" fill="#000"/>
+                            <circle cx="75" cy="50" r="5" fill="#000"/>
+                            <path d="M 35 75 Q 60 90 85 75" stroke="#000" stroke-width="4" fill="none"/>
+                            <path d="M 30 35 L 35 25 M 90 35 L 85 25" stroke="#000" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="monsters.error.name">Error Monster</h3>
+                    <p class="monster-color" data-i18n="monsters.error.color">Red Devil</p>
+                    <p data-i18n="monsters.error.description">The most common foe. Appears when general errors strike your code.</p>
+                </div>
+                <div class="monster-card">
+                    <div class="monster-visual type-monster">
+                        <svg viewBox="0 0 120 120" class="monster-svg-large">
+                            <circle cx="60" cy="60" r="50" fill="#9945ff"/>
+                            <circle cx="45" cy="50" r="10" fill="#fff"/>
+                            <circle cx="75" cy="50" r="10" fill="#fff"/>
+                            <circle cx="45" cy="50" r="5" fill="#000"/>
+                            <circle cx="75" cy="50" r="5" fill="#000"/>
+                            <path d="M 35 80 Q 60 65 85 80" stroke="#000" stroke-width="4" fill="none"/>
+                            <polygon points="60,20 65,35 55,35" fill="#000"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="monsters.type.name">TypeError Beast</h3>
+                    <p class="monster-color" data-i18n="monsters.type.color">Purple Menace</p>
+                    <p data-i18n="monsters.type.description">A cunning creature that emerges from type mismatches and incorrect operations.</p>
+                </div>
+                <div class="monster-card">
+                    <div class="monster-visual reference-monster">
+                        <svg viewBox="0 0 120 120" class="monster-svg-large">
+                            <circle cx="60" cy="60" r="50" fill="#3b82f6"/>
+                            <circle cx="45" cy="50" r="10" fill="#fff"/>
+                            <circle cx="75" cy="50" r="10" fill="#fff"/>
+                            <circle cx="45" cy="50" r="5" fill="#000"/>
+                            <circle cx="75" cy="50" r="5" fill="#000"/>
+                            <ellipse cx="60" cy="75" rx="20" ry="12" fill="#000"/>
+                            <path d="M 20 50 Q 15 60 20 70 M 100 50 Q 105 60 100 70" stroke="#3b82f6" stroke-width="8"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="monsters.reference.name">ReferenceError Wraith</h3>
+                    <p class="monster-color" data-i18n="monsters.reference.color">Blue Phantom</p>
+                    <p data-i18n="monsters.reference.description">A ghostly being that haunts undefined variables and missing references.</p>
+                </div>
+                <div class="monster-card">
+                    <div class="monster-visual warning-monster">
+                        <svg viewBox="0 0 120 120" class="monster-svg-large">
+                            <circle cx="60" cy="60" r="50" fill="#fbbf24"/>
+                            <circle cx="45" cy="50" r="10" fill="#fff"/>
+                            <circle cx="75" cy="50" r="10" fill="#fff"/>
+                            <circle cx="45" cy="50" r="5" fill="#000"/>
+                            <circle cx="75" cy="50" r="5" fill="#000"/>
+                            <circle cx="60" cy="75" r="4" fill="#000"/>
+                            <path d="M 40 25 L 35 35 M 80 25 L 85 35" stroke="#000" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="monsters.warning.name">Warning Bug</h3>
+                    <p class="monster-color" data-i18n="monsters.warning.color">Yellow Critter</p>
+                    <p data-i18n="monsters.warning.description">A pesky bug that signals potential issues before they become real problems.</p>
+                </div>
+                <div class="monster-card">
+                    <div class="monster-visual hint-monster">
+                        <svg viewBox="0 0 120 120" class="monster-svg-large">
+                            <circle cx="60" cy="60" r="50" fill="#10b981"/>
+                            <circle cx="45" cy="55" r="8" fill="#fff"/>
+                            <circle cx="75" cy="55" r="8" fill="#fff"/>
+                            <circle cx="45" cy="55" r="4" fill="#000"/>
+                            <circle cx="75" cy="55" r="4" fill="#000"/>
+                            <path d="M 40 70 Q 60 85 80 70" stroke="#000" stroke-width="3" fill="none"/>
+                            <circle cx="35" cy="35" r="3" fill="#fff" opacity="0.8"/>
+                            <circle cx="85" cy="35" r="3" fill="#fff" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="monsters.hint.name">Hint Spirit</h3>
+                    <p class="monster-color" data-i18n="monsters.hint.color">Green Guardian</p>
+                    <p data-i18n="monsters.hint.description">A friendly spirit offering suggestions to improve your code quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title" data-i18n="howto.title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 data-i18n="howto.step1.title">Install Extension</h3>
+                    <p data-i18n="howto.step1.description">Download Bug Monsters from VS Code Marketplace with just one click.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 data-i18n="howto.step2.title">Start Coding</h3>
+                    <p data-i18n="howto.step2.description">Write your code as usual. The extension monitors your workspace automatically.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 data-i18n="howto.step3.title">Watch Monsters Appear</h3>
+                    <p data-i18n="howto.step3.description">When errors occur, monsters spawn in your battlefield panel instantly!</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 data-i18n="howto.step4.title">Defeat the Monsters</h3>
+                    <p data-i18n="howto.step4.description">Fix the bugs to defeat monsters. Watch them disappear with epic 720° rotation!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 data-i18n="cta.title">Ready to Battle Bugs?</h2>
+            <p data-i18n="cta.description">Join thousands of developers making debugging fun!</p>
+            <div class="cta-buttons">
+                <a href="https://marketplace.visualstudio.com/items?itemName=kpab.bug-monsters" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+                    <span data-i18n="cta.install">Install Now - It's Free!</span>
+                </a>
+            </div>
+            <p class="cta-note" data-i18n="cta.note">MIT Licensed • Open Source • No Registration Required</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bug Monsters</h4>
+                    <p data-i18n="footer.tagline">Gamify your debugging experience</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.links.title">Links</h4>
+                    <ul>
+                        <li><a href="https://marketplace.visualstudio.com/items?itemName=kpab.bug-monsters" target="_blank" rel="noopener noreferrer" data-i18n="footer.links.marketplace">VS Code Marketplace</a></li>
+                        <li><a href="https://github.com/kpab/bug-monster" target="_blank" rel="noopener noreferrer" data-i18n="footer.links.github">GitHub Repository</a></li>
+                        <li><a href="https://github.com/kpab/bug-monster/issues" target="_blank" rel="noopener noreferrer" data-i18n="footer.links.issues">Report Issues</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.license.title">License</h4>
+                    <p data-i18n="footer.license.text">MIT License</p>
+                    <p data-i18n="footer.license.copyright">&copy; 2025 kpab</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

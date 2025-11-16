@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Title -->
+  <text x="600" y="180" font-family="'Press Start 2P', monospace" font-size="72" fill="#ff6b6b" text-anchor="middle" font-weight="bold">
+    Bug Monsters
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="250" font-family="Poppins, sans-serif" font-size="36" fill="#ffffff" text-anchor="middle">
+    Transform Boring Bugs into Epic Battles!
+  </text>
+
+  <!-- Monsters -->
+  <!-- Error Monster (Red) -->
+  <g transform="translate(200, 350)">
+    <circle cx="0" cy="0" r="60" fill="#ff4444"/>
+    <circle cx="-20" cy="-15" r="12" fill="#fff"/>
+    <circle cx="20" cy="-15" r="12" fill="#fff"/>
+    <circle cx="-20" cy="-15" r="6" fill="#000"/>
+    <circle cx="20" cy="-15" r="6" fill="#000"/>
+    <path d="M -25 15 Q 0 30 25 15" stroke="#000" stroke-width="5" fill="none"/>
+  </g>
+
+  <!-- TypeError Beast (Purple) -->
+  <g transform="translate(400, 350)">
+    <circle cx="0" cy="0" r="60" fill="#9945ff"/>
+    <circle cx="-20" cy="-15" r="12" fill="#fff"/>
+    <circle cx="20" cy="-15" r="12" fill="#fff"/>
+    <circle cx="-20" cy="-15" r="6" fill="#000"/>
+    <circle cx="20" cy="-15" r="6" fill="#000"/>
+    <path d="M -25 25 Q 0 10 25 25" stroke="#000" stroke-width="5" fill="none"/>
+  </g>
+
+  <!-- ReferenceError Wraith (Blue) -->
+  <g transform="translate(600, 350)">
+    <circle cx="0" cy="0" r="60" fill="#3b82f6"/>
+    <circle cx="-20" cy="-15" r="12" fill="#fff"/>
+    <circle cx="20" cy="-15" r="12" fill="#fff"/>
+    <circle cx="-20" cy="-15" r="6" fill="#000"/>
+    <circle cx="20" cy="-15" r="6" fill="#000"/>
+    <ellipse cx="0" cy="20" rx="25" ry="15" fill="#000"/>
+  </g>
+
+  <!-- Warning Bug (Yellow) -->
+  <g transform="translate(800, 350)">
+    <circle cx="0" cy="0" r="60" fill="#fbbf24"/>
+    <circle cx="-20" cy="-15" r="12" fill="#fff"/>
+    <circle cx="20" cy="-15" r="12" fill="#fff"/>
+    <circle cx="-20" cy="-15" r="6" fill="#000"/>
+    <circle cx="20" cy="-15" r="6" fill="#000"/>
+    <circle cx="0" cy="20" r="5" fill="#000"/>
+  </g>
+
+  <!-- Hint Spirit (Green) -->
+  <g transform="translate(1000, 350)">
+    <circle cx="0" cy="0" r="60" fill="#10b981"/>
+    <circle cx="-20" cy="-10" r="10" fill="#fff"/>
+    <circle cx="20" cy="-10" r="10" fill="#fff"/>
+    <circle cx="-20" cy="-10" r="5" fill="#000"/>
+    <circle cx="20" cy="-10" r="5" fill="#000"/>
+    <path d="M -20 15 Q 0 30 20 15" stroke="#000" stroke-width="4" fill="none"/>
+  </g>
+
+  <!-- Footer text -->
+  <text x="600" y="550" font-family="Poppins, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" opacity="0.8">
+    A VS Code Extension for Gamified Debugging
+  </text>
+</svg>
